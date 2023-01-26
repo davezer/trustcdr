@@ -1,4 +1,5 @@
 import React from 'react';
+import Jumbo from '../Jumbo';
 
 import { Container} from 'react-bootstrap';
 
@@ -10,8 +11,8 @@ const Home = () => {
   return(
 
     <>
-    <Container fluid className='typed-container'>
-     
+    <Container className="home-con">
+        <Jumbo />
     </Container>
       
     
