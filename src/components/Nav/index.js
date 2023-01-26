@@ -1,54 +1,56 @@
-import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Modal from 'react-bootstrap/Modal';
+import React, { useState } from "react";
+import logo from '../../assets/trustCDRLogo.jpg';
+// import { Link } from 'react-router-dom';
+import { Navbar, Container, Nav } from 'react-bootstrap';
+import ModalPop from '../Modal';
 
-function ModalPop() {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
+function Navigation (props) {
+  const [showModal, setShow] = useState(false);
   const handleShow = () => setShow(true);
 
+  const {
+    pages = [],
+    setCurrentPage,
+    currentPage,
+  } = props;
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
-      </Button>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control
-                type="email"
-                placeholder="name@example.com"
-                autoFocus
-              />
-            </Form.Group>
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>Example textarea</Form.Label>
-              <Form.Control as="textarea" rows={3} />
-            </Form.Group>
-          </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </>
+      <Navbar className="navbar" sticky="top" id="navbar" bg="" expand="md">
+        <Container className="brand-con">
+          <Navbar.Brand className ="brand" href="/" ><em><img src={logo} className="cdr-logo" alt="logo" /></em></Navbar.Brand>
+        </Container>
+        <Container className="nav-links-con">  
+          <Nav className="nav-links">
+            <ul className="nav-item" >
+            {pages.map(Page => (
+              <li
+                className={`mx-5 ${
+                  currentPage.name === Page.name && 'navActive'
+                  }`}
+                key={Page.name}
+                >
+                <span
+                  onClick={() => setCurrentPage(Page)}
+                >
+                  {(Page.name)}
+                </span>
+              </li>
+              
+              ))}
+            </ul>
+          </Nav>
+          <Nav className='ml-auto quote'>
+            <button onClick={() => this.setState({showModal: true})}>Get A Quote!</button>
+          </Nav>
+          <ModalPop />
+        </Container>
+      </Navbar>
+      
+    </>  
+      
+    
   );
 }
 
-export default ModalPop;
+
+export default Navigation;
