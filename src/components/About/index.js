@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import Contact from '../Contact';
 
 function About() {
     return(
@@ -28,7 +27,6 @@ function About() {
                          
                     </div>
                     <div className="about-contact">
-                        <Contact></Contact>
                     </div>
                 </div>
             </Container>    

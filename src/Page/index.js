@@ -4,6 +4,7 @@
 // import About from '../components/About';
 import Home from '../components/Home';
 import  PageContent from '../PageContent'
+import About from '../components/About';
 
 function Page({ currentPage }) {
 
@@ -17,8 +18,8 @@ function Page({ currentPage }) {
         //   return <Browse />;
         // // case 'Random':
         // //   return <Random />;
-        // case 'About':
-        //   return <About />;
+        case 'About':
+          return <About />;
         default:
           return <Home />;
       }

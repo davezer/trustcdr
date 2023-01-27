@@ -1,5 +1,5 @@
 :root {
-  font-family: 'Montserrat', sans-serif;
+  --font-family: 'Roboto Slab', serif;
   --white:  #fff;
   --blue: #00347a;
   --lime: #a3d766;
@@ -77,6 +77,7 @@ body {
   background-image: url('./assets/shreddedpaper.jpg');
   background-color: var(--white);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   align-items: flex-start;
   }
@@ -94,7 +95,7 @@ body {
   font-style: italic;
   font-size: 55px;
   color: var(--white); 
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 10px var(--blue);
 }
 
 .hero-form {
@@ -104,7 +105,7 @@ body {
   color: var(--white);
   width: 40%;
   margin: 3.5%;
-  box-shadow: 0 0 10px var(--lime);
+  box-shadow: 0 0 15px var(--white);
   border-radius: 15px;
   }
 

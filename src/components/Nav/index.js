@@ -1,12 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from '../../assets/trustCDRLogo.jpg';
 // import { Link } from 'react-router-dom';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import ModalPop from '../Modal';
 
 function Navigation (props) {
-  const [showModal, setShow] = useState(false);
-  const handleShow = () => setShow(true);
 
   const {
     pages = [],
@@ -39,10 +36,8 @@ function Navigation (props) {
               ))}
             </ul>
           </Nav>
-          <Nav className='ml-auto quote'>
-            <button onClick={() => this.setState({showModal: true})}>Get A Quote!</button>
-          </Nav>
-          <ModalPop />
+          
+         
         </Container>
       </Navbar>
       

@@ -7,7 +7,7 @@ function Jumbo () {
         <>
         <Container className="hero">
             <div className="hero-cta">
-                <h2>Start Shredding today with CDR</h2>
+                <h2 className='hero-h2'>Start Shredding today with CDR</h2>
                 {/* <p>
                 seitan heirloom post-ironic pop-up iPhone mlkshk hella selfies fashion axe occupy readymade put a bird on it
                 messenger bag Wes Anderson Schlitz plaid Bushwick church-key lo-fi skateboard slow-carb hashtag trust fund
