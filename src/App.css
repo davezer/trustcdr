@@ -20,14 +20,56 @@ body {
   min-width: fit-content;
 }
 
+/* HEADER */
+.top-bar {
+  background-color: var(--white);
+  color: var(--blue);
+  font-size: 18px;
+  height: 100px;
+  margin: 0px 0px 45px 0px;
+}
+
+.top-bar-left{
+  display: inline-block;
+  text-decoration: none;
+  padding: 0;
+}
+.top-bar-left-text {
+  color: var(--blue);
+  text-decoration: none;
+  padding: 0;
+}
+
+.top-bar-right {
+  display: flex;
+  align-items: flex-end;
+  padding: 0;
+}
+
+.top-bar-right-text {
+  color: var(--blue);
+  text-decoration: none;
+  align-items: right;
+  justify-content: space-between;
+  padding: 0;
+}
+
+
+
 /* NAVBAR */
 .brand {
-  color: var(--white);
-  font-size: 30px;
   padding-top: 15px;
   margin-top: 5px;
   text-decoration: none;
+}
 
+.brand-con  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:left;
+  align-items: left;
+  margin: -24px -12px -71px -9px;
+  padding: 0;
 }
 
 .cdr-logo {
@@ -44,12 +86,18 @@ body {
   text-align: center;  
 }
 
-.nav-link.active {
-  color: var(--lime);
+.nav-link:hover {
+  cursor: pointer;
 }
 
+
 .nav-item {
-  display: inline-block;
+  color: var(--white);
+  list-style-type: none;
+}
+
+.navActive {
+  color: var(--lime);
 }
 
 .navbar {
@@ -67,6 +115,7 @@ body {
   border-radius: 10px;
   opacity: 100%;
   text-align: center;
+  justify-content: space-around;
 }
 
 /* Hero Style Start */

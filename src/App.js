@@ -2,7 +2,7 @@ import React, {useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Nav from './components/Nav';
-import Home from './components/Home';
+// import Home from './components/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Page from './Page';

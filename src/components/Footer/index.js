@@ -6,7 +6,7 @@ function Footer() {
     <footer>
       <div className="social-container">
         <ul className="social-icons">
-          <li className='list-item'><a href="https://daveoliverio.dev" target="_blank" rel="noreferrer"><i class="fa-sharp fa-solid fa-code">Dave</i></a></li>
+          {/* <li className='list-item'><a href="https://daveoliverio.dev" target="_blank" rel="noreferrer"><i class="fa-sharp fa-solid fa-code">Dave</i></a></li> */}
         </ul>
         <h4>©2023 CDR</h4><br/>
       </div>
